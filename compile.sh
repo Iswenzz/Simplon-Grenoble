@@ -1,3 +1,5 @@
-#!/bin/sh
+#!/bin/bash
 
-sass assets/scss:dist/css --watch
+# You must install sass with npm/yarn/apt
+# npm install -g sass
+sass assets/scss:dist/css
