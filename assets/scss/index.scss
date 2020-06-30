@@ -1,6 +1,8 @@
 @import './common.scss';
 
 .navbar {
+	background-image: url("https://simplon.co/storage/1326/responsive-images/home_image_1110x550___medialibrary_original_1110_550.jpg");
+
 	header {
 		path {
 			fill: #a2bbff;
@@ -12,6 +14,20 @@
 
 		@include media(tablet_mobile) {
 			justify-content: center;
+		}
+	}
+
+	section {
+		h1 {
+			font-size: 3em;
+			background-color: $color-danger;
+			color: gainsboro;
+			font-weight: bold;
+		}
+
+		h2 {
+			background-color: black;
+			color: gainsboro;
 		}
 	}
 }
