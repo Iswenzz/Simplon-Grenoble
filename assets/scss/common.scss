@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Ubuntu&display=swap');
 
+$color-danger: #CE0033;
+$color-secondary: #1B3549;
+
 // Responsive queries
 
 $queries: (
@@ -18,186 +21,49 @@ $queries: (
 	}
 }
 
-// Bootstrap breakpoints & spacing utilities
+// Default Font
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-
-$spacer: 1rem !default;
-$spacers: () !default;
-$spacers: map-merge(
-  (
-	0: 0,
-	1: ($spacer * .25),
-	2: ($spacer * .5),
-	3: $spacer,
-	4: ($spacer * 1.5),
-	5: ($spacer * 3)
-  ),
-  $spacers
-);
-
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
-	$n: index($breakpoint-names, $name);
-	@return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+html, body {
+	font-family: "Ubuntu";
+	overflow-x: hidden;
 }
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-	$min: map-get($breakpoints, $name);
-	@return if($min != 0, $min, null);
-}
-  
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-	$next: breakpoint-next($name, $breakpoints);
-	@return if($next, breakpoint-min($next, $breakpoints) - .02, null);
-}
+// Bootstrap Buttons
 
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-	@return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
-}
-  
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	@if $min {
-		@media (min-width: $min) {
-			@content;
-		}
-	} @else {
-	  	@content;
-	}
-}
-  
-@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-	$max: breakpoint-max($name, $breakpoints);
-	@if $max {
-		@media (max-width: $max) {
-			@content;
-		}
-	} @else {
-	 	 @content;
-	}
-}
-  
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($lower, $breakpoints);
-	$max: breakpoint-max($upper, $breakpoints);
-  
-	@if $min != null and $max != null {
-		@media (min-width: $min) and (max-width: $max) {
-			@content;
-		}
-	} @else if $max == null {
-		@include media-breakpoint-up($lower, $breakpoints) {
-			@content;
-		}
-	} @else if $min == null {
-		@include media-breakpoint-down($upper, $breakpoints) {
-			@content;
-		}
-	}
-}
-  
-@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	$max: breakpoint-max($name, $breakpoints);
-  
-	@if $min != null and $max != null {
-		@media (min-width: $min) and (max-width: $max) {
-			@content;
-		}
-	} @else if $max == null {
-		@include media-breakpoint-up($name, $breakpoints) {
-			@content;
-		}
-	} @else if $min == null {
-		@include media-breakpoint-down($name, $breakpoints) {
-			@content;
-		}
-	}
-}
-  
-@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-	$min: breakpoint-min($name, $breakpoints);
-	@if $min {
-		@media (min-width: $min) {
-			@content;
-		}
-	} @else {
-	  	@content;
+@mixin btn-color($color) {
+	background-color: $color;
+	border-radius: 1em;
+
+	&:hover, &:visited, &:active, &:focus {
+		background-color: $color;
 	}
 }
 
-// Bootstrap Spacing
-@each $breakpoint in map-keys($grid-breakpoints) {
-	@include media-breakpoint-up($breakpoint) {
-		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-  
-		@each $prop, $abbrev in (margin: m, padding: p) {
-			@each $size, $length in $spacers {
-				.#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
-				.#{$abbrev}t#{$infix}-#{$size},
-				.#{$abbrev}y#{$infix}-#{$size} {
-					#{$prop}-top: $length !important;
-				}
-				.#{$abbrev}r#{$infix}-#{$size},
-				.#{$abbrev}x#{$infix}-#{$size} {
-					#{$prop}-right: $length !important;
-				}
-				.#{$abbrev}b#{$infix}-#{$size},
-				.#{$abbrev}y#{$infix}-#{$size} {
-					#{$prop}-bottom: $length !important;
-				}
-				.#{$abbrev}l#{$infix}-#{$size},
-				.#{$abbrev}x#{$infix}-#{$size} {
-					#{$prop}-left: $length !important;
-				}
-			}
-		}
+@mixin btn-color-outline($color) {
+	@include btn-color(white);
+	border: solid 3px $color;
+	border-radius: 1em;
+	color: $color;
 
-		// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
-		@each $size, $length in $spacers {
-			@if $size != 0 {
-				.m#{$infix}-n#{$size} { margin: -$length !important; }
-				.mt#{$infix}-n#{$size},
-				.my#{$infix}-n#{$size} {
-					margin-top: -$length !important;
-				}
-				.mr#{$infix}-n#{$size},
-				.mx#{$infix}-n#{$size} {
-					margin-right: -$length !important;
-				}
-				.mb#{$infix}-n#{$size},
-				.my#{$infix}-n#{$size} {
-					margin-bottom: -$length !important;
-				}
-				.ml#{$infix}-n#{$size},
-				.mx#{$infix}-n#{$size} {
-					margin-left: -$length !important;
-				}
-			}
-		}
-
-		.m#{$infix}-auto { margin: auto !important; }
-		.mt#{$infix}-auto,
-		.my#{$infix}-auto {
-			margin-top: auto !important;
-		}
-		.mr#{$infix}-auto,
-		.mx#{$infix}-auto {
-			margin-right: auto !important;
-		}
-		.mb#{$infix}-auto,
-		.my#{$infix}-auto {
-			margin-bottom: auto !important;
-		}
-		.ml#{$infix}-auto,
-		.mx#{$infix}-auto {
-			margin-left: auto !important;
-		}
+	&:hover, &:visited, &:active, &:focus {
+		border: solid 3px $color;
+		border-color: $color;
+		color: $color;
 	}
+}
+
+.btn-secondary {
+	@include btn-color($color-secondary);
+}
+
+.btn-secondary-outline {
+	@include btn-color-outline($color-secondary);
+}
+
+.btn-danger {
+	@include btn-color($color-danger);
+}
+
+.btn-danger-outline {
+	@include btn-color-outline($color-danger);
 }
