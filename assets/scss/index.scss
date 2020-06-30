@@ -1,4 +1,17 @@
-@import '/assets/scss/common.scss';
-@import '/assets/scss/navbar.scss';
-@import '/assets/scss/footer.scss';
+@import './common.scss';
 
+.navbar {
+	header {
+		path {
+			fill: #a2bbff;
+		}
+		
+		a {
+			color: dimgray;
+		}
+
+		@include media(tablet_mobile) {
+			justify-content: center;
+		}
+	}
+}
