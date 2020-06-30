@@ -1,7 +1,8 @@
 @import './common.scss';
 
 .navbar {
-	background-image: url("https://simplon.co/storage/1326/responsive-images/home_image_1110x550___medialibrary_original_1110_550.jpg");
+	background-size: cover;
+	background-image: linear-gradient(180deg, rgba(27,53,73,1) 0%, rgba(0,0,0,0) 100%), url("https://simplon.co/storage/1326/responsive-images/home_image_1110x550___medialibrary_original_1110_550.jpg");
 
 	header {
 		path {
@@ -9,10 +10,10 @@
 		}
 		
 		a {
-			color: dimgray;
+			color: gainsboro;
 		}
 
-		@include media(tablet_mobile) {
+		@include media(tablet_mobile, portrait) {
 			justify-content: center;
 		}
 	}
@@ -23,11 +24,21 @@
 			background-color: $color-danger;
 			color: gainsboro;
 			font-weight: bold;
+
+			@include media(tablet_mobile, portrait) {
+				font-size: 2em;
+			}
 		}
 
 		h2 {
 			background-color: black;
 			color: gainsboro;
+			width: 60%;
+
+			@include media(tablet_mobile, portrait) {
+				margin: auto;
+				font-size: 1.3em;
+			}
 		}
 	}
 }
