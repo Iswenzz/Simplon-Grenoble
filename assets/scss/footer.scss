@@ -1,0 +1,34 @@
+@import './common.scss';
+
+.footer {
+    ul {
+		li {
+			@include media(tablet_mobile, portrait) {
+				width: 100%;
+			}
+
+			a {
+				color: $color-secondary;
+				font-size: 0.8em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.arrow-sm {
+	display: none;
+
+	@include media(tablet_mobile, portrait) {
+		display: inline;
+		transform: rotate(-90deg);
+
+		path {
+			stroke: $color-danger;
+		}
+	}
+}
+
