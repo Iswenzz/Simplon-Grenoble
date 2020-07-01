@@ -82,6 +82,31 @@ html, body {
 	@include btn-color-outline($color-danger);
 }
 
+// Backgrounds
+
+@mixin bg-color($bg-color, $color) {
+	font-size: 1em;
+	width: 20%;
+	background-color: $bg-color !important;
+	padding: 0.5em 1em;
+	text-align: center;
+	color: $color;
+
+	@include media(tablet_mobile, portrait) {
+		font-size: 0.7em;
+		margin: 1em 0;
+		width: 70%;
+	}
+}
+
+.bg-danger {
+	@include bg-color($color-danger, white);
+}
+
+.bg-secondary {
+	@include bg-color($color-secondary, white);
+}
+
 // Slick Carousel
 
 .slick-arrow {
