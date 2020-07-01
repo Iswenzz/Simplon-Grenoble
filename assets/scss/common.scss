@@ -67,3 +67,35 @@ html, body {
 .btn-danger-outline {
 	@include btn-color-outline($color-danger);
 }
+
+// Slick Carousel
+
+.slick-arrow {
+	&:before {
+		color: $color-secondary;
+	}
+}
+
+.slick-track {
+	margin: auto;
+	height: 100%;
+
+	div {
+		height: 100%;
+	}
+}
+
+.carousel-item {
+	height: 100%;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 50%;
+			height: auto;
+		}
+	}
+}
