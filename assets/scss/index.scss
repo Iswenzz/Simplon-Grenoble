@@ -11,3 +11,42 @@
 		text-transform: uppercase;
 	}
 }
+
+.informations {
+	background-color: $color-danger;
+
+	.fa-circle {
+		path {
+			fill: white;
+		}
+	}
+
+	.fa-stack {
+		.fa-envelope {
+			path {
+				fill: $color-danger;
+			}
+		}
+	}
+
+	#{&}-contact {
+		font-size: 1.5em;
+	}
+
+	#{&}-form {
+		@include media(tablet_mobile, portrait) {
+			background-color: white;
+			padding-top: 2.5em;
+			width: 100%;
+
+			.input-group {
+				width: 85% !important;
+				margin: auto;
+			}
+
+			h6 {
+				color: black !important;
+			}
+		}
+	}
+}
