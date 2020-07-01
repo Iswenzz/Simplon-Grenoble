@@ -1,0 +1,26 @@
+@import './common.scss';
+
+.formlabel {
+    
+    &:before{
+        line-height: 2rem;
+
+        path{
+            stroke: $color-danger;
+        }
+    } 
+
+}
+
+.form-check-input {
+
+    &:before {
+        
+
+        path {
+            stroke: $color-danger;
+        }
+    }
+
+    
+}
