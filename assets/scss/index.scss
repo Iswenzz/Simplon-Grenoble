@@ -22,10 +22,3 @@
 .bg-secondary {
 	@include bg-color($color-secondary, white);
 }
-
-.carousel {
-	img {
-		width: 50% !important;
-		height: 50% !important;
-	}
-}
