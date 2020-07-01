@@ -32,23 +32,37 @@ html, body {
 
 @mixin btn-color($color) {
 	background-color: $color;
-	border-radius: 1em;
+	border-radius: 24px;
+	border-color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%);
 
 	&:hover, &:visited, &:active, &:focus {
-		background-color: $color;
+		background-color: $color !important;
+		border-color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+	}
+
+	&:focus {
+		background-color: white !important;
+		color: $color !important;
 	}
 }
 
 @mixin btn-color-outline($color) {
 	@include btn-color(white);
 	border: solid 3px $color;
-	border-radius: 1em;
+	border-color: $color;
 	color: $color;
 
 	&:hover, &:visited, &:active, &:focus {
-		border: solid 3px $color;
-		border-color: $color;
-		color: $color;
+		border: solid 3px $color !important;
+		border-color: $color !important;
+		color: $color !important;
+	}
+
+	&:focus {
+		background-color: $color !important;
+		color: white !important;
 	}
 }
 
