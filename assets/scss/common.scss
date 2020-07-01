@@ -53,11 +53,13 @@ html, body {
 	border: solid 3px $color;
 	border-color: $color;
 	color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
 
 	&:hover, &:visited, &:active, &:focus {
 		border: solid 3px $color !important;
 		border-color: $color !important;
 		color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
 	}
 
 	&:focus {
