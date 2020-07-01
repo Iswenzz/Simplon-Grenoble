@@ -109,6 +109,33 @@ html, body {
 	@include bg-color($color-secondary, white);
 }
 
+.bg-white {
+	@include bg-color(white, $color-secondary);
+}
+
+// Inputs
+
+@mixin input-color($bg-color, $color) {
+	background-color: $bg-color;
+	border-radius: 24px;
+	border-color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%);
+
+	&:hover, &:visited, &:active, &:focus {
+		background-color: $bg-color !important;
+		border-color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+	}
+}
+
+.input-danger {
+	@include input-color(white, $color-danger);
+}
+
+.input-secondary {
+	@include input-color(white, $color-secondary);
+}
+
 // Slick Carousel
 
 .slick-arrow {
