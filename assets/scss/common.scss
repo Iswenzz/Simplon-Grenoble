@@ -67,3 +67,11 @@ html, body {
 .btn-danger-outline {
 	@include btn-color-outline($color-danger);
 }
+
+// Slick Carousel
+
+.slick-arrow {
+	&:before {
+		color: $color-secondary;
+	}
+}
