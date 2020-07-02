@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="no-js" lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SImplon - Grenoble</title>
-	<!-- Bootstrap CSS & Font Awesome & AnimateCSS -->
+	<!-- Bootstrap CSS & Font Awesome & AnimateCSS & Slick -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" integrity="sha256-+Q/z/qVOexByW1Wpv81lTLvntnZQVYppIL1lBdhtIq0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,6 +14,7 @@
 	<link rel="stylesheet" href="dist/css/common.css">
 	<link rel="stylesheet" href="dist/css/navbar.css">
 	<link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/footer.css">
 </head>
 <body>
 	<!-- NavBar -->
@@ -59,8 +62,8 @@
 						</div>
 					</section>
 					<section class="navbar-buttons container d-flex justify-content-md-end justify-content-center my-5">
-						<button class="btn btn-secondary mx-2">Welcode</button>
-						<button class="btn btn-danger mx-2">Simplon for All</button>
+						<button class="btn btn-secondary mx-2 px-4 py-2">Welcode</button>
+						<button class="btn btn-danger mx-2 px-4 py-2">Simplon for All</button>
 					</section>
 				</div>
 			</div>
@@ -69,17 +72,219 @@
 
 	<!-- Content -->
 	<main>
+		<!-- Présentation -->
+		<section class="presentation py-5">
+			<h2 class="my-5 mx-lg-5 mx-sm-0">
+				<span class="bg-danger">Présentation</span>
+			</h2>
+			<div class="container w-75 mx-auto">
+				<p>
+					Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+			</div>
+		</section>
 
+		<!-- Candidature en cours -->
+		<section class="apply py-5">
+			<h2 class="my-5 mx-lg-5 mx-sm-0">
+				<span class="bg-secondary">Candidature en cours</span>
+			</h2>
+			<div class="container w-75 mx-auto">
+				<p>
+					Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<button class="btn btn-secondary-outline my-2 px-3 py-2">Je candidate !</button>
+			</div>
+		</section>
+
+		<!-- Recrutez nos simplonien.ne.s -->
+		<section class="recruit py-5">
+			<h2 class="my-5 mx-lg-5 mx-sm-0">
+				<span class="bg-danger">Recrutez nos simplonien.ne.s</span>
+			</h2>
+			<div class="container w-75 mx-auto">
+				<p>
+					Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+				</p>
+				<button class="btn btn-secondary-outline my-2 px-3 py-2">Plus d'infos</button>
+			</div>
+		</section>
+
+		<!-- L'équipe -->
+		<section class="team py-5">
+			<h2 class="my-5 mx-lg-5 mx-sm-0">
+				<span class="bg-secondary">L'équipe</span>
+			</h2>
+			<ul class="container d-flex flex-column flex-md-row justify-content-center text-center list-unstyled py-5">
+				<li class="container-fluid flex-column justify-content-center align-items-center my-4">
+					<img width="128" height="128" class="rounded-circle" alt="team" src="https://media-exp1.licdn.com/dms/image/C5603AQH60G3h-X05hA/profile-displayphoto-shrink_200_200/0?e=1599091200&v=beta&t=nTXYhf9Eco8rKmXjAFMc8bun56xX0HEXY32vKnuuz3w" />
+					<h3 class="mt-3">Cédric</h3>
+					<h4>Coustellié</h4>
+				</li>
+				<li class="container-fluid flex-column justify-content-center align-items-center my-4">
+					<img width="128" height="128" class="rounded-circle" alt="team" src="https://www.thomas-chapuis.dev/assets/static/thomas-200x200.7ba8522.cc4c4ff4a0601c306ca6dec1e164d915.jpg" />
+					<h3 class="mt-3">Thomas</h3>
+					<h4>chapuis</h4>
+				</li>
+				<li class="container-fluid flex-column justify-content-center align-items-center my-4">
+					<img width="128" height="128" class="rounded-circle" alt="team" src="https://simplon.co/storage/11551/Marie-Di-Tommaso.JPG" />
+					<h3 class="mt-3">Marie</h3>
+					<h4>Di Tommaso</h4>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Partenaires -->
+		<sectio class="partners py-5">
+			<h2 class="my-5 mx-lg-5 mx-sm-0">
+				<span class="bg-danger">Partenaires</span>
+			</h2>
+			<div class="container p-5 mx-auto">
+				<ul class="carousel container-fluid d-flex justify-content-center text-center">
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1705/conversions/frenchtech-1-thumb.png">
+						</div>
+					</li>
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1698/conversions/Logo-Microsoft-thumb.png">
+						</div>
+					</li>
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1699/conversions/Fondation-Soci%C3%A9t%C3%A9-G%C3%A9n%C3%A9rale_logo-thumb.png">
+						</div>
+					</li>
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1679/conversions/Inco-thumb.jpg">
+						</div>
+					</li>
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1666/conversions/logo-ecole-regionale-du-numerique-thumb.jpg">
+						</div>
+					</li>
+					<li class="carousel-item">
+						<div>
+							<img class="img-fluid" src="https://simplon.co/storage/1658/conversions/bofaml-og-logo-thumb.jpg">
+						</div>
+					</li>
+				</div>
+			</div>
+		</section>
+
+		<!-- Informations -->
+		<section class="informations my-5 row justify-content-center">
+			<div class="col-md-6 col-sm-12">
+				<div class="d-flex flex-column justify-content-center align-items-start align-items-lg-center">
+					<header>
+						<h2 class="mx-lg-5 my-4 my-md-5 align-self-start">
+							<span class="bg-white">Besoin</span>
+						</h2>
+						<h3 class="mx-lg-5 my-4 my-md-5 align-self-start">
+							<span class="bg-secondary">d'une information</span>
+						</h3>
+					</header>
+					<div class="align-self-center text-center mt-5 mt-lg-0">
+						<h6 class="text-white">Vous avez une question ?</h6>
+						<button class="btn btn-secondary-outline mb-5">Consultez notre Anti-FAQ</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="informations-contact h-100 d-flex flex-column justify-content-between align-items-center">
+					<a href="contact.html" class="d-flex m-5 mx-lg-5 mx-sm-0 align-items-center text-decoration-none text-white">
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-circle fa-stack-2x"></i>
+							<i class="far fa-envelope fa-stack-1x"></i>
+						</span>
+						<span>Nous contacter</span>
+					</a>
+					<form class="informations-form mr-0 pr-0 mr-lg-5 pr-lg-5 text-center" 
+					action="" method="GET" novalidate>
+						<h6 class="text-white">Inscrivez-vous à la newsletter</h6>
+						<div class="input-group">
+							<input type="email" name="email" class="form-control input-secondary" 
+							placeholder="Votre Email" aria-label="email">
+							<div class="input-group-append">
+								<button class="btn btn-secondary mb-5" type="submit">
+									<i class="far fa-envelope"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
 	</main>
 
-	<!-- Footer -->
-	<footer>
-		
-	</footer>
+    <!-- Footer -->
+    <footer class="footer container-fluid">
+        <ul class="d-flex nav justify-content-md-center justify-content-sm-start flex-sm-column flex-md-row">
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"
+                    ></svg>
+                    Mentions légales
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    nos actualités
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    nous rejoindre
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    presse
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="https://simplon.co/plan-du-site">
+                    <svg class="mx-2 arrow-sm dropright" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    plan du site
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    contact
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="#">
+                    <svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+                    notre agence numérique
+                </a>
+            </li>
+        </ul>
+        <picture class="d-flex justify-content-md-center justify-content-sm-start">
+            <img src="https://simplon.co/images/logo-simplon.png" id="smp-logo-mobile" alt="logo" class="img-fluid mt-5">
+        </picture>
+        <h5 class="text-md-center">Formations au numérique gratuites et inclusives</h5>
+	
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
-<!-- Bootstrap & JQuery & Popper & Waypoints -->
+<!-- Bootstrap & JQuery & Popper & Waypoints & Slick -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js" integrity="sha256-ib+M3qc853bWuB0Dg3vH8Er145Rrg5o8C/vzCUrT974=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+<!-- JS -->
+<script src="assets/js/index.js"></script>
 </html>

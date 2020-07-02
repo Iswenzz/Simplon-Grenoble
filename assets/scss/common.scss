@@ -32,23 +32,39 @@ html, body {
 
 @mixin btn-color($color) {
 	background-color: $color;
-	border-radius: 1em;
+	border-radius: 24px;
+	border-color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%);
 
 	&:hover, &:visited, &:active, &:focus {
-		background-color: $color;
+		background-color: $color !important;
+		border-color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+	}
+
+	&:focus {
+		background-color: white !important;
+		color: $color !important;
 	}
 }
 
 @mixin btn-color-outline($color) {
 	@include btn-color(white);
 	border: solid 3px $color;
-	border-radius: 1em;
+	border-color: $color;
 	color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
 
 	&:hover, &:visited, &:active, &:focus {
-		border: solid 3px $color;
-		border-color: $color;
-		color: $color;
+		border: solid 3px $color !important;
+		border-color: $color !important;
+		color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+	}
+
+	&:focus {
+		background-color: $color !important;
+		color: white !important;
 	}
 }
 
@@ -66,4 +82,88 @@ html, body {
 
 .btn-danger-outline {
 	@include btn-color-outline($color-danger);
+}
+
+// Backgrounds
+
+@mixin bg-color($bg-color, $color) {
+	font-size: 1em;
+	width: 20%;
+	background-color: $bg-color !important;
+	padding: 0.5em 1em;
+	text-align: center;
+	color: $color;
+
+	@include media(tablet_mobile, portrait) {
+		font-size: 0.7em;
+		margin: 1em 0;
+		width: 70%;
+	}
+}
+
+.bg-danger {
+	@include bg-color($color-danger, white);
+}
+
+.bg-secondary {
+	@include bg-color($color-secondary, white);
+}
+
+.bg-white {
+	@include bg-color(white, $color-secondary);
+}
+
+// Inputs
+
+@mixin input-color($bg-color, $color) {
+	background-color: $bg-color;
+	border-radius: 24px;
+	border-color: $color;
+	box-shadow: 0.1rem 0.2rem darken($color, 10%);
+
+	&:hover, &:visited, &:active, &:focus {
+		background-color: $bg-color !important;
+		border-color: $color !important;
+		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+	}
+}
+
+.input-danger {
+	@include input-color(white, $color-danger);
+}
+
+.input-secondary {
+	@include input-color(white, $color-secondary);
+}
+
+// Slick Carousel
+
+.slick-arrow {
+	&:before {
+		color: $color-secondary;
+	}
+}
+
+.slick-track {
+	margin: auto;
+	height: 100%;
+
+	div {
+		height: 100%;
+	}
+}
+
+.carousel-item {
+	height: 100%;
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 50%;
+			height: auto;
+		}
+	}
 }
