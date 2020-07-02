@@ -24,8 +24,16 @@ $queries: (
 // Default Font
 
 html, body {
-	font-family: "Ubuntu";
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+h1, h2 {
+	font-family: "Ubuntu";
+}
+
+h3, h4, h5, h6, p, a {
+	font-family: "Nunito Sans";
 }
 
 // Bootstrap Buttons
@@ -164,6 +172,31 @@ html, body {
 		img {
 			width: 50%;
 			height: auto;
+		}
+	}
+}
+
+// Misc
+
+.back-to-top {
+	background-color: white;
+	border: solid 3px $color-danger;
+	border-radius: 100%;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	display: none;
+
+	path {
+		fill: $color-danger;
+	}
+
+	&:hover {
+		background-color: $color-danger;
+		border: solid 3px $color-danger;
+
+		path {
+			fill: white;
 		}
 	}
 }
