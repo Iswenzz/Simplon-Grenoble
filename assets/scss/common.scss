@@ -24,8 +24,16 @@ $queries: (
 // Default Font
 
 html, body {
-	font-family: "Ubuntu";
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+h1, h2 {
+	font-family: "Ubuntu";
+}
+
+h3, h4, h5, h6, p, a {
+	font-family: "Nunito Sans";
 }
 
 // Bootstrap Buttons
