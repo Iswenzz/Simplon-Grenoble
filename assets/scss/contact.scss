@@ -1,26 +1,37 @@
 @import './common.scss';
 
-.formlabel {
-    
-    &:before{
-        line-height: 2rem;
+.navbarslim {
+	ul {
+		background-color: rgba(0, 0, 0, .6);
+		border-radius: 1em;
 
-        path{
-            stroke: $color-danger;
-        }
-    } 
+		path {
+			transition: 0.2s;
+			fill: #a2bbff;
+		}
 
-}
+		a {
+			color: gainsboro;
 
-.form-check-input {
+			&:hover {
+				svg, path {
+					fill: slateblue;
+				}
+			}
+		}
+	}
 
-    &:before {
-        
-
-        path {
-            stroke: $color-danger;
-        }
-    }
-
-    
+	&:after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 0;
+		width: 100%;
+		height: 60%;
+		background-image: url("../../assets/images/red-wave.svg");
+		background-size: cover;
+		background-position: 100% center;
+		pointer-events: none;
+	}
 }
