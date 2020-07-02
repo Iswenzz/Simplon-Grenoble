@@ -5,6 +5,14 @@
 		li {
 			@include media(tablet_mobile, portrait) {
 				width: 100%;
+
+				a {
+					&:hover {
+						text-decoration: underline;
+						transform: translateX(10px);
+						animation: 1s;
+					}
+				}
 			}
 
 			a {
@@ -21,6 +29,9 @@
 
 .arrow-sm {
 	display: none;
+	transition-property: transform;
+	transition-duration: 1s;
+
 
 	@include media(tablet_mobile, portrait) {
 		display: inline;
