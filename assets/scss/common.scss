@@ -36,6 +36,10 @@ h3, h4, h5, h6, p, a {
 	font-family: "Nunito Sans";
 }
 
+input::placeholder {
+	color: black !important;
+}
+
 // Bootstrap Buttons
 
 @mixin btn-color($color) {
