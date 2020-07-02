@@ -35,3 +35,11 @@
 		pointer-events: none;
 	}
 }
+
+.bootstrap-select, .dropdown-menu {
+	width: 100% !important;
+
+	a {
+		white-space: pre-wrap;
+	}
+}
