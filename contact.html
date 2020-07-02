@@ -64,72 +64,80 @@
 			<div class="container d-flex justify-content-center mx-auto my-5">
 				<form method="GET" action="" class="row w-100" novalidate>
 					<div class="col-sm-12 col-md-6 form-group">
-						<label class="fromlabel" for="exampleFormControlInput1">Nom et Prénom</label>
-						<input type="name" name="nom et prénom" class="form-control input-secondary" id="exampleFormControlInput1" placeholder="votre Nom et Prénom" required>
-						<label class="fromlabel mt-3" for="exampleFormControlInput1">Email</label>
-						<input type="email" name="email" class="form-control input-secondary" id="exampleFormControlInput1" placeholder="votre adresse mail" required>
-						<label class="fromlabel mt-3" for="disabledSelect">Pays/Région</label>
-						<select class="form-control selectpicker" id="disabledSelect" data-style="input-secondary" required>
-							<option>Choisissez...</option>
-							<option>Avers / Belgique</option>
-							<option>Bruxelles / Belgique</option>
-							<option>Charleroi / Belgique</option>
-							<option>Genk, Vlaanderen / Belgique</option>
-							<option>Liège / Belgique</option>
-							<option>Abidjan / Côte d'Ivoire</option>
-							<option>Barcelone / Espagne</option>
-							<option>Auvergne-Rhône-Alpes / France</option>
-							<option>Bourgogne-Franche-Comté / France</option>
-							<option>Centre-Val de Loire / France</option>
-							<option>Corse / France</option>
-							<option>Grand Est / France</option>
-							<option>Guadeloupe / France</option>
-							<option>Guyane / France</option>
-							<option>Hauts-de-France / France</option>
-							<option>Île-de-France / France</option>
-							<option>Martinique / France</option>
-							<option>Mayotte / France</option>
-							<option>Normandie / France</option>
-							<option>Nouvelle-Aquitaine / France</option>
-							<option>Occitanie / France</option>
-							<option>Grand Ouest / France</option>
-							<option>Provence-Alpes-Cote d'Azur / France</option>
-							<option> La Réunion / France</option>
-							<option>Libreville / Gabon</option> 
-							<option>Mumbai / Inde</option> 
-							<option>Pune / Inde</option> 
-							<option>Amman / Jordanie</option> 
-							<option>Mafraq / Jordanie</option> 
-							<option>Beyrouth / Liban </option> 
-							<option>Tananarive / Madagascar</option> 
-							<option>Safi / Maroc</option> 
-							<option>Youssoufia / Maroc</option> 
-							<option>DOM-TOM / Polynésie Française</option>
-							<option>Tahiti / Polynésie Française</option> 
-							<option>Cluj-Napoca / Roumanie</option> 
-							<option>Dakar / Sénégal</option> 
-							<option>Genève / Suisse</option> 
-							<option>Tunis / Tunisie</option>
-						</select>
-						<label class="fromlabel mt-3" for="exampleFormControlInput1">Vous êtes ?</label>
-						<div class="form-check">
-							<input class="form-check-input input-secondary" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" required>
-							<label class="form-check-label mx-2 align-middle" for="exampleRadios1">
-								un particulier
-							</label>
+						<div class="form-group">
+							<label class="fromlabel" for="form-name">Nom et Prénom</label>
+							<input type="name" name="name" class="form-control input-secondary" id="form-name" placeholder="Votre nom et prénom" required>
 						</div>
-						<div class="form-check">
-							<input class="form-check-input input-secondary" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" required>
-							<label class="form-check-label mx-2 align-middle" for="exampleRadios2">
-								une organisation
-							</label>
+						<div class="form-group">
+							<label class="fromlabel mt-3" for="form-email">Email</label>
+							<input type="email" name="email" class="form-control input-secondary" id="form-email" placeholder="Votre adresse mail" required>
+						</div>
+						<div class="form-group">
+							<label class="fromlabel mt-3" for="form-region">Pays/Région</label>
+							<select name="region" class="form-control selectpicker" id="form-region" data-style="input-secondary" required>
+								<option selected disabled>Choisissez...</option>
+								<option>Avers / Belgique</option>
+								<option>Bruxelles / Belgique</option>
+								<option>Charleroi / Belgique</option>
+								<option>Genk, Vlaanderen / Belgique</option>
+								<option>Liège / Belgique</option>
+								<option>Abidjan / Côte d'Ivoire</option>
+								<option>Barcelone / Espagne</option>
+								<option>Auvergne-Rhône-Alpes / France</option>
+								<option>Bourgogne-Franche-Comté / France</option>
+								<option>Centre-Val de Loire / France</option>
+								<option>Corse / France</option>
+								<option>Grand Est / France</option>
+								<option>Guadeloupe / France</option>
+								<option>Guyane / France</option>
+								<option>Hauts-de-France / France</option>
+								<option>Île-de-France / France</option>
+								<option>Martinique / France</option>
+								<option>Mayotte / France</option>
+								<option>Normandie / France</option>
+								<option>Nouvelle-Aquitaine / France</option>
+								<option>Occitanie / France</option>
+								<option>Grand Ouest / France</option>
+								<option>Provence-Alpes-Cote d'Azur / France</option>
+								<option> La Réunion / France</option>
+								<option>Libreville / Gabon</option> 
+								<option>Mumbai / Inde</option> 
+								<option>Pune / Inde</option> 
+								<option>Amman / Jordanie</option> 
+								<option>Mafraq / Jordanie</option> 
+								<option>Beyrouth / Liban </option> 
+								<option>Tananarive / Madagascar</option> 
+								<option>Safi / Maroc</option> 
+								<option>Youssoufia / Maroc</option> 
+								<option>DOM-TOM / Polynésie Française</option>
+								<option>Tahiti / Polynésie Française</option> 
+								<option>Cluj-Napoca / Roumanie</option> 
+								<option>Dakar / Sénégal</option> 
+								<option>Genève / Suisse</option> 
+								<option>Tunis / Tunisie</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="fromlabel mt-3" for="form-radio-status1">Vous êtes ?</label>
+							<div class="form-check">
+								<input class="form-check-input input-secondary" type="radio" name="status" id="form-radio-status1" value="personal" required>
+								<label class="form-check-label mx-2 align-middle" for="form-radio-status1">
+									un particulier
+								</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input input-secondary" type="radio" name="status" id="form-radio-status2" value="organization" required>
+								<label class="form-check-label mx-2 align-middle" for="form-radio-status2">
+									une organisation
+								</label>
+							</div>
 						</div>
 					</div>
 					<div class="col-sm-12 col-md-6 d-flex flex-column">
-						<div>
-							<label class="fromlabel" for="disabledSelect">Sujet</label>
-							<select id="disabledSelect" class="form-control selectpicker"  data-style="input-secondary">
-								<option>Choisissez...</option>
+						<div class="form-group">
+							<label class="fromlabel" for="form-subject">Sujet</label>
+							<select name="subject" id="form-subject" class="form-control selectpicker" data-style="input-secondary">
+								<option selected disabled>Choisissez...</option>
 								<option>Se former chez Simplon</option>
 								<option>En savoir plus sur les formations entreprises/salariés</option>
 								<option>Recrutez un.e apreenant.e Simplon</option>
@@ -140,9 +148,14 @@
 								<option>Autre</option>
 							</select>
 						</div>
-						<label class="fromlabel mt-3" for="exampleFormControlTextarea1">Votre message</label>
-						<textarea class="form-control input-secondary" id="exampleFormControlTextarea1"></textarea>
-						<button type="submit" class="btn btn-secondary-outline mb-2 mt-5 align-self-sm-center align-self-lg-end">Envoyer</button>
+						<div class="form-group">
+							<label class="fromlabel mt-3" for="form-message">Votre message</label>
+							<textarea name="message" class="form-control input-secondary" 
+							id="form-message" required></textarea>
+						</div>
+						<button type="submit" class="btn btn-secondary-outline mb-2 mt-5 align-self-sm-center align-self-lg-end">
+							Envoyer
+						</button>
 					</div>
 				</form>
 			</div>
@@ -153,7 +166,7 @@
 	<footer class="footer container-fluid my-5">
 		<ul class="d-flex nav justify-content-md-center justify-content-sm-start flex-sm-column flex-md-row">
 			<li class="nav-item">
-				<a class="nav-link text-uppercase" href="#">
+				<a class="nav-link text-uppercase" href="mentions_legales.html">
 					<svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"
 					></svg>
 					Mentions légales
@@ -184,7 +197,7 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-uppercase" href="#">
+				<a class="nav-link text-uppercase" href="contact.html">
 					<svg class="mx-2 arrow-sm" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
 					contact
 				</a>
@@ -197,7 +210,9 @@
 			</li>
 		</ul>
 		<picture class="container d-flex justify-content-center mx-auto">
-			<img src="https://simplon.co/images/logo-simplon.png" id="smp-logo-mobile" alt="logo" class="img-fluid mt-5">
+			<a href="index.html">
+				<img src="https://simplon.co/images/logo-simplon.png" id="smp-logo-mobile" alt="logo" class="img-fluid mt-5">
+			</a>
 		</picture>
 		<h5 class="text-center">Formations au numérique gratuites et inclusives</h5>
 	</footer>
