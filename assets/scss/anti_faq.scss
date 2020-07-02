@@ -1,0 +1,95 @@
+@import './common.scss';
+
+.navbarslim {
+	ul {
+		background-color: rgba(0, 0, 0, .6);
+		border-radius: 1em;
+
+		path {
+			transition: 0.2s;
+			fill: #a2bbff;
+		}
+
+		a {
+			color: gainsboro;
+
+			&:hover {
+				svg, path {
+					fill: slateblue;
+				}
+			}
+		}
+	}
+
+	&:after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 0;
+		width: 100%;
+		height: 60%;
+		background-image: url("../../assets/images/red-wave.svg");
+		background-size: cover;
+		background-position: 100% center;
+		pointer-events: none;
+	}
+}
+
+
+h4 {
+    font-weight: 500;
+}
+
+a {
+    color: #212529;
+
+    &:hover {
+        color: $color-danger;
+        text-decoration: underline;
+    }
+}
+
+.footer {
+    ul {
+		li {
+			@include media(tablet_mobile, portrait) {
+				width: 100%;
+
+				a {
+					&:hover {
+						text-decoration: underline;
+						transform: translateX(10px);
+						animation: 1s;
+					}
+				}
+			}
+
+			a {
+				color: $color-secondary;
+				font-size: 0.8em;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.arrow-sm {
+	display: none;
+	transition-property: transform;
+	transition-duration: 1s;
+
+
+	@include media(tablet_mobile, portrait) {
+		display: inline;
+		transform: rotate(-90deg);
+
+		path {
+			stroke: $color-danger;
+		}
+	}
+}
+
