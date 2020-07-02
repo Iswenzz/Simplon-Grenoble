@@ -1,56 +1,21 @@
 @import './common.scss';
 
-.navbarslim {
-	ul {
-		background-color: rgba(0, 0, 0, .6);
-		border-radius: 1em;
+.mentions {	
+	h4 {
+		font-weight: bold;
+	}
 
-		path {
-			transition: 0.2s;
-			fill: #a2bbff;
-		}
+	a {
+		color: #212529;
 
-		a {
-			color: gainsboro;
-
-			&:hover {
-				svg, path {
-					fill: slateblue;
-				}
-			}
+		&:hover {
+			color: $color-danger;
+			text-decoration: underline;
 		}
 	}
 
-	&:after {
-		z-index: -1;
-		content: "";
-		position: absolute;
-		top: -100px;
-		left: 0;
-		width: 100%;
-		height: 60%;
-		background-image: url("../../assets/images/red-wave.svg");
-		background-size: cover;
-		background-position: 100% center;
-		pointer-events: none;
+	strong {
+		font-weight: 500;
+		font-style: oblique 20deg;
 	}
-}
-
-
-h4 {
-    font-weight: 500;
-}
-
-a {
-    color: #212529;
-
-    &:hover {
-        color: $color-danger;
-        text-decoration: underline;
-    }
-}
-
-strong {
-    font-weight: 500;
-    font-style: oblique 20deg;
 }
