@@ -6,8 +6,26 @@
 	#{&}-bg {
 		z-index: 0;
 		background-size: cover;
-		background-position: 50% 34%;
+		background-position: 50% 78%;
 		background-image: url("../../assets/images/bg.jpg");
+	}
+
+	#{&}-header {
+		margin: 5em 0;
+
+		picture {
+			&:before {
+				z-index: -1;
+				content: "";
+				width: 95%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				position: absolute;
+				background-color: white;
+				filter: blur(3em);
+			}
+		}
 	}
 
 	#{&}-content {
@@ -37,7 +55,7 @@
 				}
 
 				a {
-					color: gainsboro;
+					color: white;
 
 					&:hover {
 						svg, path {
@@ -52,7 +70,7 @@
 			h1 {
 				font-size: 3em;
 				background-color: $color-danger;
-				color: gainsboro;
+				color: white;
 				font-weight: bold;
 	
 				@include media(tablet_mobile, portrait) {
@@ -62,7 +80,7 @@
 	
 			h2 {
 				background-color: black;
-				color: gainsboro;
+				color: white;
 				width: 60%;
 	
 				@include media(tablet_mobile, portrait) {
