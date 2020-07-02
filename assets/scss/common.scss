@@ -125,6 +125,10 @@ input::placeholder {
 	@include bg-color(white, $color-secondary);
 }
 
+.bg-black {
+	@include bg-color(black, white);
+}
+
 // Inputs
 
 @mixin input-color($bg-color, $color) {
