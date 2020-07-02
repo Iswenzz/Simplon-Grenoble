@@ -167,3 +167,28 @@ html, body {
 		}
 	}
 }
+
+// Misc
+
+.back-to-top {
+	background-color: white;
+	border: solid 3px $color-danger;
+	border-radius: 100%;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	display: none;
+
+	path {
+		fill: $color-danger;
+	}
+
+	&:hover {
+		background-color: $color-danger;
+		border: solid 3px $color-danger;
+
+		path {
+			fill: white;
+		}
+	}
+}
