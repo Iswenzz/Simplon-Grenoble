@@ -1,0 +1,18 @@
+@import './common.scss';
+
+h6 {
+    font-weight: 500;
+}
+
+a {
+
+    &:hover {
+        color: $color-danger;
+        text-decoration: underline;
+    }
+}
+
+strong {
+    font-weight: 500;
+    font-style: oblique 20deg;
+}
