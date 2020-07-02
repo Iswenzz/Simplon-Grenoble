@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" integrity="sha256-+Q/z/qVOexByW1Wpv81lTLvntnZQVYppIL1lBdhtIq0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 	<!-- CSS -->
 	<link rel="stylesheet" href="dist/css/common.css">
 	<link rel="stylesheet" href="dist/css/navbar.css">
@@ -73,29 +74,22 @@
 	<main>
 
         <!--form-->
-        <div class="container d-flex mb-5">
-            <div class="row">
-                <h2 class="h2">Contactez-nous</h2>
-                <h5 class="h5">Une question, une suggestion, un projet, une envie ?</h5>
-                <p class="m-3">Vous habitez en Ile-de-France ? Assistez à l’une de nos réunions d'information en ligne.​​​​​​​</p>
-                <p class="m-3">Vous souhaitez savoir s’il existe une fabrique Simplon près de chez vous ?</p>
-                <p class="m-3">Vous souhaitez savoir s’il existe une fabrique Simplon près de chez vous ?</p>
-                <p class="m-3">​​​​​​​​Vous voulez trouver une formation près de chez vous ?</p>
-                <p class="m-3">Vous souhaitez ouvrir une fabrique Simplon dans votre ville ?</p>
-                <p class="m-3">Pour toute autre question, envoyez-nous un message via le formulaire suivant : </p>
-            </div>
-        </div>
+       
+        <h2 class="my-5 mx-lg-5 mx-sm-0">
+            <span class="bg-danger">Contactez-nous</span>
+        </h2>
+   
         <div class="container d-flex mt-5">
-            <form method="" class="row">
+            <form method="GET" action="" class="row" novalidate>
                 <div class="col-sm form-group">
                     <label class="fromlabel" for="exampleFormControlInput1">Nom et Prénom</label>
-                    <input type="name" name="nom et prénom" class="form-control" id="exampleFormControlInput1" placeholder="votre Nom et Prénom">
+                    <input type="name" name="nom et prénom" class="form-control input-secondary" id="exampleFormControlInput1" placeholder="votre Nom et Prénom" required>
 
                     <label class="fromlabel mt-3" for="exampleFormControlInput1">Email</label>
-                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="votre adresse mail">
+                    <input type="email" name="email" class="form-control input-secondary" id="exampleFormControlInput1" placeholder="votre adresse mail" required>
 
                     <label class="fromlabel mt-3" for="disabledSelect">Pays/Région</label>
-                    <select class="form-control" id="disabledSelect">
+                    <select class="form-control selectpicker" id="disabledSelect" data-style="input-secondary" required>
                         <option>Choisissez...</option>
                         <option>Avers / Belgique</option>
                         <option>Bruxelles / Belgique</option>
@@ -140,37 +134,40 @@
                   
                     <label class="fromlabel mt-3" for="exampleFormControlInput1">Vous êtes ?</label>
                     <div class="form-check">
-                        <input class="form-check-input path" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <input class="form-check-input input-secondary" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" required>
                         <label class="form-check-label" for="exampleRadios1">
                             un particulier
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <input class="form-check-input input-secondary" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" required>
                         <label class="form-check-label" for="exampleRadios2">
                             une organisation
                         </label>
                     </div>
                    
                 </div>
-                <div class="col-sm form-group btn-group">
-
-                    <label class="fromlabel"  class="fromlabel btn btn-secondary btn-sm" for="disabledSelect">Sujet</label>
-                    <select id="disabledSelect" class="form-control" >
-                        <option>Choisissez...</option>
-                        <option>Se former chez Simplon</option>
-                        <option>En savoir plus sur les formations entreprises/salariés</option>
-                        <option>Recrutez un.e apreenant.e Simplon</option>
-                        <option>Devenir partenaire</option>
-                        <option>Prestations web /accompagnement numérique</option>
-                        <option>Ouvrir une fabrique/formation </option>
-                        <option>Média /demande d'interview</option>
-                        <option>Autre</option>
-                    </select>
-
-
+                <div class="col-sm">
+                    <div>
+                        <label class="fromlabel" for="disabledSelect">Sujet</label>
+                        <select id="disabledSelect" class="form-control selectpicker"  data-style="input-secondary" multiple >
+                            <!-- <button type="button" class="d-inline px-3 rounded circle dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" required >
+                                <img class="btn-arrow ">
+                            </button> -->
+                            <option>Choisissez...</option>
+                            <option>Se former chez Simplon</option>
+                            <option>En savoir plus sur les formations entreprises/salariés</option>
+                            <option>Recrutez un.e apreenant.e Simplon</option>
+                            <option>Devenir partenaire</option>
+                            <option>Prestations web /accompagnement numérique</option>
+                            <option>Ouvrir une fabrique/formation </option>
+                            <option>Média /demande d'interview</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                   
                     <label class="fromlabel mt-3" for="exampleFormControlTextarea1">Votre message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control input-secondary" id="exampleFormControlTextarea1"></textarea>
 
                     <button type="submit" class="btn btn-secondary-outline mb-2 mt-5 align-self-sm-center align-self-lg-end">Envoyer</button>
                 </div>
@@ -189,4 +186,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 </html>
