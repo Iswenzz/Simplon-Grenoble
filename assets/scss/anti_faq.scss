@@ -64,9 +64,7 @@ a {
 			&:active, &:not(.collapsed) {
 				svg {
 					transform: rotate(180deg);
-					path {
-						stroke: $color-danger;
-					}
+					
 				}
 			}
 		}
@@ -83,14 +81,21 @@ a {
 	}
 }
 
-
-
-.faqPlus {
-	display: inline;
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+.panel-title > a:before {
+    float: right !important;
+   
+    content:"\f068";
+    padding-right: 5px;
 }
-
-.faqLess {
-	display: inline;
+.panel-title > a.collapsed:before {
+    float: right !important;
+    content:"\f067";
+}
+.panel-title > button:hover, 
+.panel-title > button:active, 
+.panel-title > button:focus  {
+    text-decoration:none;
 }
 
 
