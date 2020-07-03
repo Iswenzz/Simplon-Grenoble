@@ -67,78 +67,141 @@
                 </p>
             </div>
           
-            <section id="faqAccordion" class="accordion faqContainer">
-                <div class="card faqCard border-bottom">  
-                    <button type="button" data-toggle="collapse" data-target="#collapse1"           aria-expanded="false" aria-controls="collapse1" class="card-header faqQuestion collapsed" id="heading1">
-                        <span class="text-left">
-                            Sélection des critères pour rentrer à Simplon 
-                        </span>
-                        <img src="./assets/images/icon-arrow.svg" class="faqArrow" alt="down arrow">
-                    </button>
-                    <div id="collapse1" class="faqAnswer collapse" aria-labelledby="heading1" data-parent="#faqAccordion" >
-                        <div class="card-body">
-                            Les critères sociaux sont prépondérants et préalables pour accéder à nos formations qui sont réellement et intégralement gratuites, d’où le fait que nous souhaitons privilégier les demandeurs d’emploi (décrocheurs, ou longue durée), les personnes en reconversion et les seniors, les publics réfugiés ou primo-arrivants, les personnes en situation de handicap, les allocataires de minimas sociaux et les publics éloignés du numérique ou de l’emploi. Mais ce n’est pas suffisant car le nombre de places par session est malheureusement limité, aussi parce que 7 mois sans avoir forcément de revenus et assister à une formation intensive à plein temps et enfin parce que la pédagogie de Simplon est particulière et ne s’apparente pas à une pédagogie “scolaire” et donc ne convient pas à tout le monde. C’est donc au travers d’une sélection sur la base de la motivation, de l’appétence, de la capacité à travailler en équipe, de la prédisposition au métier numérique visé par la formation et de la compatibilité avec le modèle pédagogique (autonomie, pédagogies actives, mode projet, peer-learning,…) ainsi qu’à l’organisation de Simplon.co (pair programming, travail collaboratif) que se décide l’admission. Localement, en fonction des partenaires, des territoires et des financements, d’autres critères peuvent intervenir : âge (moins de 25 ans ou au contraire séniors), géographie (quartiers politique de la ville ou ruralité, résidence dans l’agglomération de la fabrique, etc.), niveaux d’études (pas de diplôme et décrocheur pour la Grande École du Numérique, BAC + 2 pour certaines formations, etc. La formation Simplon est donc à la fois inclusive et sélective, de 10 à 50% des candidatures selon les territoires et les sessions, mais ce n’est pas sur les critères habituels de niveau de diplôme, d’expérience, de test techniques ou de pré-requis. Et certaines populations (femmes, personnes issues des quartiers populaires, non bacheliers) sont clairement favorisées dans notre recrutement.
-                        </div>
-                    </div>
+            <section class="container mx-auto faq-accordion">
+                <div class="accordion" id="accordion">
+                    <div class="card">
+						<div class="card-header p-0" id="headingOne">
+							<h3 class="mb-0">
+								<hr class="b-lg" />
+								<button class="btn btn-danger-label collapsed p-0 py-3 w-100 text-left" type="button" 
+								data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" 
+								aria-controls="collapseOne">
+									Sélection des critères pour rentrer à Simplon 
+									<span class="float-right">
+										<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="45" height="45" fill="#CE0033"/>
+                                            <line x1="21.5" y1="7" x2="21.5" y2="39" stroke="#FFFCFC" stroke-width="5"/>
+                                            <line x1="6.0149" y1="22.4047" x2="38.0143" y2="22.5954" stroke="#FFFCFC" stroke-width="5"/>
+                                        </svg>
+									</span>
+                                </button>
+                             
+							</h3>
+						</div>
+						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+							<p>
+								Les critères sociaux sont prépondérants et préalables pour accéder à nos formations qui sont réellement et intégralement gratuites, d’où le fait que nous souhaitons privilégier les demandeurs d’emploi (décrocheurs, ou longue durée), les personnes en reconversion et les seniors, les publics réfugiés ou primo-arrivants, les personnes en situation de handicap, les allocataires de minimas sociaux et les publics éloignés du numérique ou de l’emploi. Mais ce n’est pas suffisant car le nombre de places par session est malheureusement limité, aussi parce que 7 mois sans avoir forcément de revenus et assister à une formation intensive à plein temps et enfin parce que la pédagogie de Simplon est particulière et ne s’apparente pas à une pédagogie “scolaire” et donc ne convient pas à tout le monde. C’est donc au travers d’une sélection sur la base de la motivation, de l’appétence, de la capacité à travailler en équipe, de la prédisposition au métier numérique visé par la formation et de la compatibilité avec le modèle pédagogique (autonomie, pédagogies actives, mode projet, peer-learning,…) ainsi qu’à l’organisation de Simplon.co (pair programming, travail collaboratif) que se décide l’admission. Localement, en fonction des partenaires, des territoires et des financements, d’autres critères peuvent intervenir : âge (moins de 25 ans ou au contraire séniors), géographie (quartiers politique de la ville ou ruralité, résidence dans l’agglomération de la fabrique, etc.), niveaux d’études (pas de diplôme et décrocheur pour la Grande École du Numérique, BAC + 2 pour certaines formations, etc. La formation Simplon est donc à la fois inclusive et sélective, de 10 à 50% des candidatures selon les territoires et les sessions, mais ce n’est pas sur les critères habituels de niveau de diplôme, d’expérience, de test techniques ou de pré-requis. Et certaines populations (femmes, personnes issues des quartiers populaires, non bacheliers) sont clairement favorisées dans notre recrutement.
+							</p>
+						</div>
+					</div>
                 </div>
 
-                <div class="card faqCard border-bottom">  
-                    <button type="button" data-toggle="collapse" data-target="#collapse2"           aria-expanded="false" aria-controls="collapse2" class="card-header faqQuestion collapsed" id="heading2">
-                        <span>
-                            Simplon.co ne s'intéresse ou ne forme qu'au métier de dévellopeur 
-                        </span>
-                        <img src="./assets/images/icon-arrow.svg" class="faqArrow" alt="down arrow">
-                    </button>
-                    <div id="collapse2" class="faqAnswer collapse" aria-labelledby="heading2" data-parent="#faqAccordion" >
-                        <div class="card-body">
+            
+                
+                <div class="card">
+                    <div class="card-header p-0" id="headingTwo">
+                        <h3 class="mb-0">
+                            <hr class="b-lg" />
+                            <button class="btn btn-danger-label collapsed p-0 py-3 w-100 text-left" type="button" 
+                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" 
+                            aria-controls="collapseTwo">
+                                Simplon.co ne s'intéresse ou ne forme qu'au métier de dévellopeur 
+                                <span class="float-right">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="45" height="45" fill="#CE0033"/>
+                                        <line x1="21.5" y1="7" x2="21.5" y2="39" stroke="#FFFCFC" stroke-width="5"/>
+                                        <line x1="6.0149" y1="22.4047" x2="38.0143" y2="22.5954" stroke="#FFFCFC" stroke-width="5"/>
+                                    </svg>
+                                        
+                                </span>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <p>
                             Historiquement c’était vrai, Simplon.co s’est positionné sur un référentiel de formation de développeur web et mobile, suivant en cela les précédents américains (« bootcamps ») et les initiatives pionnières qui existaient déjà en France. Et ça reste une part importante de nos formations, parce que c’est le métier le plus en tension dans le domaine du numérique, mais le référentiel a été rapidement déployé sous différentes versions (Ruby, PHP, Java, JS), sous différentes modalités (qualifiante ou certifiante) et avec des approches métiers différenciées (full stack, back-end, front-end, intégration, CMS,…). Mais très rapidement, constatant à la fois que le métier de développeur exige des qualités particulières qui ne sont pas à portée de tous les profils, que les Simploniens formés en tant que développeurs exerçaient des métiers différents une fois employés, et enfin que d’autres métiers du numérique étaient également en tension – et permettaient donc de proposer des parcours d’insertion plus inclusifs -, Simplon.co a investigué d’autres référentiels de formation. Référent numérique, data analyste, Wordpress/CMS, DevOps, Cybersécurité, technicien data IA, Adminsys, etc. Enfin, Simplon.co explore en partenariat avec des entreprises et d’autres organismes de formation des référentiels de formation autour des technologies Mainframe, FTTH, fab manager,…
-                        </div>
+                        </p>
                     </div>
                 </div>
 
-                <div class="card faqCard border-bottom">  
-                    <button type="button" data-toggle="collapse" data-target="#collapse3"           aria-expanded="false" aria-controls="collapse3" class="card-header faqQuestion collapsed" id="heading3">
-                        <span>
+                <div class="card">
+                    <div class="card-header p-0" id="headingThree">
+                        <h3 class="mb-0">
+                            <hr class="b-lg" />
+                            <button class="btn btn-danger-label collapsed p-0 py-3 w-100 text-left" type="button" 
+                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" 
+                            aria-controls="collapseThree">
                             Le statut des apprenants et la gratuité ou la rémunération des formations simplon 
-                        </span>
-                        <img src="./assets/images/icon-arrow.svg" class="faqArrow" alt="down arrow">
-                    </button>
-                    <div id="collapse3" class="faqAnswer collapse" aria-labelledby="heading3" data-parent="#faqAccordion" >
-                        <div class="card-body">
+                                <span class="float-right">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="45" height="45" fill="#CE0033"/>
+                                        <line x1="21.5" y1="7" x2="21.5" y2="39" stroke="#FFFCFC" stroke-width="5"/>
+                                        <line x1="6.0149" y1="22.4047" x2="38.0143" y2="22.5954" stroke="#FFFCFC" stroke-width="5"/>
+                                    </svg>
+                                        
+                                </span>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <p>
                             La gratuité intégrale des formations Simplon.co est un principe cardinal qui n’a souffert aucune entorse depuis le début et elle est inscrite de manière définitive dans nos statuts : on aimerait que ce soit le cas de toutes les formations qui se réclament gratuites mais qui ne le sont pas. La première promotion de Montreuil a été effectivement aidée financièrement – à 3/4 du SMIC en moyenne, entièrement sur fonds propres et avec l’aide de subventions et de mécénat. Malgré le facteur déterminant de réussite que peut constituer une aide financière dans le cadre d’une formation intensive, pour des apprenants en situation de précarité notamment, cela a été très difficile à assumer économiquement par la structure, et a donc été stoppé à partir de la deuxième promotion à Montreuil. Dans d’autres configurations, les apprenants ont également pu être rémunérés via des embauches, leurs droits au chômage ou au RSA maintenus, ou encore indemnisés au titre d’un statut de « stagiaire de la formation professionnelle ». La Fondation Simplon, abritée par FACE reconnue d’utilité publique, octroie également à titre exceptionnel, en cas d’urgence, des bourses permettant d’éviter le décrochage des apprenants. Mais le plus important pour nous car ça nous est spécifique et unique : AUCUN apprenant ne s’est jamais vu refuser l’intégration à une session de formation Simplon parce qu’il ne permettait pas de disposer d’une aide individuelle à la formation de Pôle Emploi ou de tout autre dispositif. Nous ne filtrons pas au regard des financements qui nous sont alloués par la prise en charge de tel ou tel apprenant. La gratuité intégrale est pour nous gage d’inclusion et d’égalité des chances.
-                        </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header p-0" id="headingFour">
+                        <h3 class="mb-0">
+                            <hr class="b-lg" />
+                            <button class="btn btn-danger-label collapsed p-0 py-3 w-100 text-left" type="button" 
+                            data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" 
+                            aria-controls="collapseFour">
+                            Simplon.co est une organisation militante et partisane
+                                <span class="float-right">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="45" height="45" fill="#CE0033"/>
+                                        <line x1="21.5" y1="7" x2="21.5" y2="39" stroke="#FFFCFC" stroke-width="5"/>
+                                        <line x1="6.0149" y1="22.4047" x2="38.0143" y2="22.5954" stroke="#FFFCFC" stroke-width="5"/>
+                                    </svg>
+                                        
+                                </span>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <p>
+                            Soutenue au travers de subventions par les pouvoirs publics et les collectivités (l’Élysée via La France s’engage et Grande École du Numérique, Secrétariat d’État au numérique via le label French Tech ainsi que plusieurs régions et agglomérations dans les essaimages), Simplon.co est pour autant une organisation privée, non-partisane et n’est affiliée à aucun mouvement politique. Les prises de position de Simplon.co concernent le code pour tous, la parité femmes-hommes dans le numérique et l’Économie Sociale et Solidaire, la bataille pour l’emploi des jeunes, la revitalisation des territoires dont les quartiers populaires, les zones rurales et les Outre-mer, la lutte contre toutes les formes d’extrémisme politique ou religieux : c’est clairement militant. Mais rien là dedans ne relève d’une approche partisane ou politicienne. Simplon.co est une entreprise sociale avec des convictions, pas un parti politique, ni un syndicat, ni une ONG et n’est affilié à aucune organisation autre que professionnelle. Mais c’est vrai, nous aimons lancer des débats, prendre la parole, faire du prosélytisme sur les thématiques qui nous sont chères. C’est notre façon de faire avancer les causes qui nous tiennent à coeur… Enfin, on peut dire que l’entrepreneuriat social est une forme déterminée d’engagement politique au sens où il tente d’intervenir sur la société. Dans ce sens là alors oui, Simplon fait de la politique ;-) et a rassemblé ses prises de positions et actions dans un livret de plaidoyer que vous pouvez lire ici et qui aborde 4 principaux axes : les publics, les territoires, le numérique responsable et la digitalisation de l’ESS et des TPE/PME
+                        </p>
                     </div>
                 </div>
                 
-                <div class="card faqCard border-bottom">  
-                    <button type="button" data-toggle="collapse" data-target="#collapse4"           aria-expanded="false" aria-controls="collapse4" class="card-header faqQuestion collapsed" id="heading4">
-                        <span>
-                            Simplon.co est une organisation militante et partisane
-                        </span>
-                        <img src="./assets/images/icon-arrow.svg" class="faqArrow" alt="down arrow">
-                    </button>
-                    <div id="collapse4" class="faqAnswer collapse" aria-labelledby="heading4" data-parent="#faqAccordion" >
-                        <div class="card-body">
-                            Soutenue au travers de subventions par les pouvoirs publics et les collectivités (l’Élysée via La France s’engage et Grande École du Numérique, Secrétariat d’État au numérique via le label French Tech ainsi que plusieurs régions et agglomérations dans les essaimages), Simplon.co est pour autant une organisation privée, non-partisane et n’est affiliée à aucun mouvement politique. Les prises de position de Simplon.co concernent le code pour tous, la parité femmes-hommes dans le numérique et l’Économie Sociale et Solidaire, la bataille pour l’emploi des jeunes, la revitalisation des territoires dont les quartiers populaires, les zones rurales et les Outre-mer, la lutte contre toutes les formes d’extrémisme politique ou religieux : c’est clairement militant. Mais rien là dedans ne relève d’une approche partisane ou politicienne. Simplon.co est une entreprise sociale avec des convictions, pas un parti politique, ni un syndicat, ni une ONG et n’est affilié à aucune organisation autre que professionnelle. Mais c’est vrai, nous aimons lancer des débats, prendre la parole, faire du prosélytisme sur les thématiques qui nous sont chères. C’est notre façon de faire avancer les causes qui nous tiennent à coeur… Enfin, on peut dire que l’entrepreneuriat social est une forme déterminée d’engagement politique au sens où il tente d’intervenir sur la société. Dans ce sens là alors oui, Simplon fait de la politique ;-) et a rassemblé ses prises de positions et actions dans un livret de plaidoyer que vous pouvez lire ici et qui aborde 4 principaux axes : les publics, les territoires, le numérique responsable et la digitalisation de l’ESS et des TPE/PME.
-                        </div>
-                    </div>
-                </div>
-                   
-                <div class="card faqCard border-bottom">  
-                    <button type="button" data-toggle="collapse" data-target="#collapse5"           aria-expanded="false" aria-controls="collapse5" class="card-header faqQuestion collapsed" id="heading5">
-                        <span>
+                <div class="card">
+                    <div class="card-header p-0" id="headingFive">
+                        <h3 class="mb-0">
+                            <hr class="b-lg" />
+                            <button class="btn btn-danger-label collapsed p-0 py-3 w-100 text-left" type="button" 
+                            data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" 
+                            aria-controls="collapseFive">
                             Simplon à l'international ?
-                        </span>
-                        <img src="./assets/images/icon-arrow.svg" class="faqArrow" alt="down arrow">
-                    </button>
-                    <div id="collapse5" class="faqAnswer collapse" aria-labelledby="heading5" data-parent="#faqAccordion" >
-                        <div class="card-body">
+                                <span class="float-right">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="45" height="45" fill="#CE0033"/>
+                                        <line x1="21.5" y1="7" x2="21.5" y2="39" stroke="#FFFCFC" stroke-width="5"/>
+                                        <line x1="6.0149" y1="22.4047" x2="38.0143" y2="22.5954" stroke="#FFFCFC" stroke-width="5"/>
+                                    </svg>
+                                        
+                                </span>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <p>
                             Dès 2015, Simplon a réalisé des pilotes à l’étranger en Roumanie, en Afrique du Sud et en Côte d’Ivoire. C’est cette même année que Simplon a co-organisé la première édition de l’Africa Code Week sponsorisée par SAP et coordonné la sensibilisation et l’acculturation de plus 90000 jeunes africains dans 18 pays du continent. Ensuite, les pilotes et l’opportunisme de Simplon se sont transformés en véritable stratégie axée sur des partenariats forts et ancrés dans le durée. C’est désormais dans plus de 18 pays que Simplon déploie sa méthode d’insertion professionnelle par la formation gratuite et inclusive aux métiers techniques du numérique en forte tension au travers de ses fabriques présentes dans plusieurs pays d’Europe (Belgique avec BeCode, Espagne avec FactoriaF5, Suisse avec Réalise), d’Afrique (Sénégal, Côte d’Ivoire, Gabon, Algérie, Tunisie bientôt Mali, Burkina, Sierra Leone), du Moyen-Orient (Liban, Jordanie) et aussi en Inde.
-                        </div>
+                        </p>
                     </div>
                 </div>
-            </section>
-           
+
 
             <!-- Back to top -->
             <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
