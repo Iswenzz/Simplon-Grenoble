@@ -1,147 +1,56 @@
 @import './common.scss';
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 
-.navbarslim {
-	ul {
-		background-color: rgba(0, 0, 0, .6);
-		border-radius: 1em;
+.faq {
+	hr {
+		background-color: transparent;
+		border-bottom: dotted 2px black;
+	}
 
-		path {
-			transition: 0.2s;
-			fill: #a2bbff;
+	h4 {
+		font-weight: 500;
+	}
+	
+	a {
+		color: #212529;
+	
+		&:hover {
+			color: $color-danger;
+			text-decoration: underline;
 		}
+	}
 
-		a {
-			color: gainsboro;
+	#{&}-accordion {
+		button {
 
-			&:hover {
-				svg, path {
-					fill: slateblue;
+			&:active, &:hover, &:visited, &:focus {
+				box-shadow: none !important;
+			}
+
+			svg {
+				transition: 0.4s;
+				path {
+					stroke: $color-danger;
 				}
 			}
-		}
-	}
 
-	&:after {
-		z-index: -1;
-		content: "";
-		position: absolute;
-		top: -100px;
-		left: 0;
-		width: 100%;
-		height: 60%;
-		background-image: url("../../assets/images/red-wave.svg");
-		background-size: cover;
-		background-position: 100% center;
-		pointer-events: none;
-	}
-}
-
-
-h4 {
-    font-weight: 500;
-}
-
-a {
-    color: #212529;
-
-    &:hover {
-        color: $color-danger;
-        text-decoration: underline;
-    }
-}
-
-.panel {
-	#{&}-title {
-
-	}
-}
-.panel {
-	
-	width: 100%;
-
-	button {
-
-		svg {
-			transition: 0.4s;
-			position:absolute;
-		}
-
-		&:before{
-			content: url("/assets/images/faqPlus.svg");
-		}
-
-		&:before(.collapsed) {
-			content: url("/assets/images/faqLess.svg");
-		}
-
-
-		// accordion arrow
-		&:active, &:not(.collapsed), &:focus {
-			svg {
-				transform: rotate(180deg);
-				
-			}
-		}
-	}
-
-	div {
-		background-color: white;
-		border: 0;
-	}
-
-	@include media(tablet_mobile, portrait) {
-		width: 100%;
-		text-align: initial;
-	}
-	
-}
-
-
-
-
-
-.footer {
-    ul {
-		li {
-			@include media(tablet_mobile, portrait) {
-				width: 100%;
-
-				a {
-					&:hover {
-						text-decoration: underline;
-						transform: translateX(10px);
-						animation: 1s;
+			// accordion arrow
+			&:active, &:not(.collapsed) {
+				svg {
+					transform: rotate(180deg);
+					path {
+						stroke: $color-danger;
 					}
 				}
 			}
+		}
 
-			a {
-				color: $color-secondary;
-				font-size: 0.8em;
+		div {
+			background-color: white;
+			border: 0;
+		}
 
-				&:hover {
-					text-decoration: underline;
-				}
-			}
+		@include media(tablet_mobile, portrait) {
+			text-align: initial;
 		}
 	}
 }
-
-
-.arrow-sm {
-	display: none;
-	transition-property: transform;
-	transition-duration: 1s;
-
-
-	@include media(tablet_mobile, portrait) {
-		display: inline;
-		transform: rotate(-90deg);
-
-		path {
-			stroke: $color-danger;
-		}
-	}
-}
-
