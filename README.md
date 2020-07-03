@@ -1,6 +1,6 @@
 ![](https://i.imgur.com/XFvRaaO.png)
 # Simplon HTML CSS TP
-![](https://i.imgur.com/SV7BaOf.jpg)
+![](https://i.imgur.com/M17nIkZ.jpg)
 
 # Simplon Grenoble
 
@@ -11,7 +11,7 @@ Livrables
 Un dépot Gitlab contenant votre code source (HTML, SASS, CSS, Images, ...), ainsi que le schéma de votre maquette graphique. Ce schéma doit être au format image (JPG, PNG) et peut être fait soit sur un outil numérique ou alors juste en mode papier/crayon (prendre une photo)
 Contexte du projet
 
-Vous devez respecter la charte graphique du groupe Simplon (couleur, police d'écriture, etc ...). Vous devez aussi intégrer le logo du Simplon.
+**Vous devez respecter la charte graphique du groupe Simplon (couleur, police d'écriture, etc ...). Vous devez aussi intégrer le logo du Simplon.**
 
 *Aucune maquette graphique n'a été définit pour le site, vous avez carte blanche.*
 
