@@ -1,6 +1,11 @@
 @import './common.scss';
 
-.antifaq {
+.faq {
+	hr {
+		background-color: transparent;
+		border-bottom: dotted 2px black;
+	}
+
 	h4 {
 		font-weight: 500;
 	}
@@ -13,39 +18,38 @@
 			text-decoration: underline;
 		}
 	}
-	
-	.panel {
-		width: 100%;
-	
+
+	#{&}-accordion {
 		button {
+
+			&:active, &:hover, &:visited, &:focus {
+				box-shadow: none !important;
+			}
+
 			svg {
 				transition: 0.4s;
-				position:absolute;
+				path {
+					stroke: $color-danger;
+				}
 			}
-	
-			&:before{
-				content: url("/assets/images/faqPlus.svg");
-			}
-	
-			&:before(.collapsed) {
-				content: url("/assets/images/faqLess.svg");
-			}
-	
+
 			// accordion arrow
-			&:active, &:not(.collapsed), &:focus {
+			&:active, &:not(.collapsed) {
 				svg {
 					transform: rotate(180deg);
+					path {
+						stroke: $color-danger;
+					}
 				}
 			}
 		}
-	
+
 		div {
 			background-color: white;
 			border: 0;
 		}
-	
+
 		@include media(tablet_mobile, portrait) {
-			width: 100%;
 			text-align: initial;
 		}
 	}
