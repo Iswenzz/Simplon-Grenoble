@@ -1,4 +1,5 @@
 @import './common.scss';
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 
 .navbarslim {
 	ul {
@@ -50,53 +51,53 @@ a {
     }
 }
 
+.panel {
+	#{&}-title {
 
-.faq {
-	#{&}-accordion {
-		width: 50%;
-
-		button {
-			svg {
-				transition: 0.4s;
-			}
-
-			// accordion arrow
-			&:active, &:not(.collapsed) {
-				svg {
-					transform: rotate(180deg);
-					
-				}
-			}
-		}
-
-		div {
-			background-color: white;
-			border: 0;
-		}
-
-		@include media(tablet_mobile, portrait) {
-			width: 100%;
-			text-align: initial;
-		}
 	}
 }
+.panel {
+	
+	width: 100%;
 
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
-.panel-title > a:before {
-    float: right !important;
-   
-    content:"\f068";
-    padding-right: 5px;
+	button {
+
+		svg {
+			transition: 0.4s;
+			position:absolute;
+		}
+
+		&:before{
+			content: url("/assets/images/faqPlus.svg");
+		}
+
+		&:before(.collapsed) {
+			content: url("/assets/images/faqLess.svg");
+		}
+
+
+		// accordion arrow
+		&:active, &:not(.collapsed), &:focus {
+			svg {
+				transform: rotate(180deg);
+				
+			}
+		}
+	}
+
+	div {
+		background-color: white;
+		border: 0;
+	}
+
+	@include media(tablet_mobile, portrait) {
+		width: 100%;
+		text-align: initial;
+	}
+	
 }
-.panel-title > a.collapsed:before {
-    float: right !important;
-    content:"\f067";
-}
-.panel-title > button:hover, 
-.panel-title > button:active, 
-.panel-title > button:focus  {
-    text-decoration:none;
-}
+
+
 
 
 
