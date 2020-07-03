@@ -134,12 +134,12 @@ input::placeholder {
 @mixin input-color($bg-color, $color) {
 	background-color: $bg-color;
 	border-color: $color;
-	box-shadow: 0.1rem 0.2rem darken($color, 10%);
+	box-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
 
 	&:hover, &:visited, &:active, &:focus {
 		background-color: $bg-color !important;
 		border-color: $color !important;
-		box-shadow: 0.1rem 0.2rem darken($color, 10%) !important;
+		box-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.3) !important;
 	}
 }
 
