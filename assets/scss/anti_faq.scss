@@ -50,54 +50,47 @@ a {
     }
 }
 
-.faqContainer {
-    text-align: left;
+
+.faq {
+	#{&}-accordion {
+		width: 50%;
+
+		button {
+			svg {
+				transition: 0.4s;
+			}
+
+			// accordion arrow
+			&:active, &:not(.collapsed) {
+				svg {
+					transform: rotate(180deg);
+					path {
+						stroke: $color-danger;
+					}
+				}
+			}
+		}
+
+		div {
+			background-color: white;
+			border: 0;
+		}
+
+		@include media(tablet_mobile, portrait) {
+			width: 100%;
+			text-align: initial;
+		}
+	}
 }
 
 
-.faqCard {
-    margin: 0;
-    padding: 0;
+
+.faqPlus {
+	display: inline;
 }
 
-.faqQuestion {
-    padding-top: 1px;
-    padding-bottom: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.faqQuestion img {
-    width: 200%;
-    height: 80%;
-    border-radius: 250px 250px 250px 250px;
-    background: var(--Primary);
-    z-index: -99;
-    position: absolute;
-    bottom: 0;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.faqArrow {
-	
-    display: inline;
-    transform: rotate(-90deg);
-
-	path {
-		fill: $color-danger;
-    }
-}
-
-.faqAnswer {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
+.faqLess {
+	display: inline;
 }
 
 
