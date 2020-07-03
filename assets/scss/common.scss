@@ -36,6 +36,10 @@ h3, h4, h5, h6, p, a {
 	font-family: "Nunito Sans";
 }
 
+input::placeholder {
+	color: black !important;
+}
+
 // Bootstrap Buttons
 
 @mixin btn-color($color) {
@@ -121,11 +125,14 @@ h3, h4, h5, h6, p, a {
 	@include bg-color(white, $color-secondary);
 }
 
+.bg-black {
+	@include bg-color(black, white);
+}
+
 // Inputs
 
 @mixin input-color($bg-color, $color) {
 	background-color: $bg-color;
-	border-radius: 24px;
 	border-color: $color;
 	box-shadow: 0.1rem 0.2rem darken($color, 10%);
 
@@ -142,6 +149,16 @@ h3, h4, h5, h6, p, a {
 
 .input-secondary {
 	@include input-color(white, $color-secondary);
+}
+
+.input-danger-rounded {
+	@extend .input-danger;
+	border-radius: 24px;
+}
+
+.input-secondary-rounded {
+	@extend .input-secondary;
+	border-radius: 24px;
 }
 
 // Slick Carousel
@@ -174,6 +191,12 @@ h3, h4, h5, h6, p, a {
 			height: auto;
 		}
 	}
+}
+
+// Containers
+
+.container-header {
+	max-width: 1440px;
 }
 
 // Misc

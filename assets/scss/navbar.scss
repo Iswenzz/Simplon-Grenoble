@@ -7,11 +7,29 @@
 		z-index: 0;
 		background-size: cover;
 		background-position: 50% 78%;
-		background-image: url("https://simplon.co/storage/2320/refugeek-1.jpg");
+		background-image: url("../../assets/images/bg.jpg");
+	}
+
+	#{&}-header {
+		margin: 5em 0;
+
+		picture {
+			&:before {
+				z-index: -1;
+				content: "";
+				width: 95%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				position: absolute;
+				background-color: white;
+				filter: blur(3em);
+			}
+		}
 	}
 
 	#{&}-content {
-		&:after {
+		&:before {
 			z-index: -2;
 			content: "";
 			position: absolute;
@@ -37,7 +55,7 @@
 				}
 
 				a {
-					color: gainsboro;
+					color: white;
 
 					&:hover {
 						svg, path {
@@ -52,7 +70,7 @@
 			h1 {
 				font-size: 3em;
 				background-color: $color-danger;
-				color: gainsboro;
+				color: white;
 				font-weight: bold;
 	
 				@include media(tablet_mobile, portrait) {
@@ -62,7 +80,7 @@
 	
 			h2 {
 				background-color: black;
-				color: gainsboro;
+				color: white;
 				width: 60%;
 	
 				@include media(tablet_mobile, portrait) {
@@ -71,5 +89,45 @@
 				}
 			}
 		}
+	}
+}
+
+.navbarslim {
+	&:before {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		top: -100px;
+		left: 0;
+		width: 100%;
+		height: 60%;
+		background-image: url("../../assets/images/red-wave.svg");
+		background-size: cover;
+		background-position: 33% 100%;
+		pointer-events: none;
+	}
+
+	ul {
+		background-color: rgba(0, 0, 0, .6);
+		border-radius: 1em;
+
+		path {
+			transition: 0.2s;
+			fill: #a2bbff;
+		}
+
+		a {
+			color: gainsboro;
+
+			&:hover {
+				svg, path {
+					fill: slateblue;
+				}
+			}
+		}
+	}
+
+	section {
+		margin: 10em 0 5em 0;
 	}
 }
