@@ -1,5 +1,6 @@
 ![](https://i.imgur.com/XFvRaaO.png)
 # Simplon HTML CSS TP
+![](https://i.imgur.com/SV7BaOf.jpg)
 
 # Simplon Grenoble
 
@@ -12,7 +13,7 @@ Contexte du projet
 
 Vous devez respecter la charte graphique du groupe Simplon (couleur, police d'écriture, etc ...). Vous devez aussi intégrer le logo du Simplon.
 
-Aucune maquette graphique n'a été définit pour le site, vous avez carte blanche.
+*Aucune maquette graphique n'a été définit pour le site, vous avez carte blanche.*
 
 * Le site devra être réalisé en HTML et CSS.
 * Le site doit être responsive
@@ -29,7 +30,7 @@ Aucune maquette graphique n'a été définit pour le site, vous avez carte blanc
 * Vous pouvez utiliser un framework CSS : Bootstrap ou autre
 * Vous pouvez utiliser toutes les librairies CSS ou JS que vous voulez
 
-Modalités pédagogiques
+#### Modalités pédagogiques
 
-Le travail est à faire en groupe de 2.
-A rendre pour le 03 juillet 2020 au soir.
+**Le travail est à faire en groupe de 2.
+A rendre pour le 03 juillet 2020 au soir.**
