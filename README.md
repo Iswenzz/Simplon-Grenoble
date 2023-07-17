@@ -1,8 +1,5 @@
-![](https://i.imgur.com/XFvRaaO.png)
-# Simplon HTML CSS TP
-![](https://i.imgur.com/M17nIkZ.jpg)
-
 # Simplon Grenoble
+![](https://i.imgur.com/M17nIkZ.jpg)
 
 Mini site fabrique Simplon
 Créer un mini site pour le centre de formation Simplon de la ville de la promo. Le site devra présenter la formation Simplon ainsi que donner les informations utiles sur la fabrique de Simplon.
